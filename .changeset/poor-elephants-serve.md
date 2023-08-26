@@ -1,5 +1,5 @@
 ---
-"config-uploader": patch
+"LCD.ConfigUploader": patch
 ---
 
 super nice
