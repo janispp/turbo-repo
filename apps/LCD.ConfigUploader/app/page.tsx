@@ -3,7 +3,7 @@ import { Button, Header } from "ui";
 export default function Page() {
   return (
     <>
-      <Header text="config-uploader" />
+      <Header text="cossnfig-uploader" />
       <Button />
     </>
   );
