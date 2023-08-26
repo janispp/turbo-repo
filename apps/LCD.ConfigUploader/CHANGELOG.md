@@ -1,5 +1,11 @@
 # config-uploader
 
+## 2.1.4
+
+### Patch Changes
+
+- 4075506: asdasdasds
+
 ## 2.1.3
 
 ### Patch Changes
