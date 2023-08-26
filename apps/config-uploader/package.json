@@ -6,7 +6,8 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "publish-zip": "node ../../publish-zip.js"
   },
   "dependencies": {
     "next": "^13.4.1",

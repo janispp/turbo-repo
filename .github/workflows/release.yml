@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # to create release (changesets/action)
-      pull-requests: write # to create pull request (changesets/action)
+      pull-requests: write # to create version pull request (changesets/action)
+      pages: write # to publish to pages
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -26,3 +27,6 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Static Files
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: echo steps.changesets.outputs
