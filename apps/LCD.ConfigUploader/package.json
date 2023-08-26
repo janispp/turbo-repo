@@ -1,5 +1,5 @@
 {
-  "name": "config-uploader",
+  "name": "LCD.ConfigUploader",
   "version": "2.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "publish-zip": "node ../../publish-zip.js"
+    "publish-zip": "node ../../publish-zip.js -p LCD.ConfigUploader"
   },
   "dependencies": {
     "next": "^13.4.1",
