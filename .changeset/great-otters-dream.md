@@ -1,5 +1,0 @@
----
-"LCD.ConfigUploader": patch
----
-
-asdasdasds
