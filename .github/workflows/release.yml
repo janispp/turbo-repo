@@ -36,4 +36,4 @@ jobs:
       - name: Upload Artifact
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: './docs'
+          folder: docs
