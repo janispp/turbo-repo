@@ -32,6 +32,7 @@ jobs:
         run: echo ${{steps.changesets.outputs}}
       - name: Check if branch name is 'changeset-release/main'
         run: |
+          echo "${GITHUB_REF##refs/heads/}"
           if [[ "${GITHUB_REF##refs/heads/}" == "changeset-release/main" ]]; then
             echo "Branch name is 'changeset-release/main'"
             BRANCH_IS_RELEASE=true
