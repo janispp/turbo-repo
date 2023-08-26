@@ -1,5 +1,11 @@
 # config-uploader
 
+## 2.1.2
+
+### Patch Changes
+
+- cb6d894: Hello
+
 ## 2.1.1
 
 ### Patch Changes
