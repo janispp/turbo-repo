@@ -34,9 +34,6 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: echo ${{steps.changesets.outputs}}
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           path: './docs'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
