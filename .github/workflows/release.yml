@@ -30,25 +30,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Changesets
         run: echo ${{steps.changesets.outputs}}
-      - name: Check if branch name is 'changeset-release/main'
-        run: |
-          echo "${GITHUB_REF##refs/heads/}"
-          if [[ "${GITHUB_REF##refs/heads/}" == "changeset-release/main" ]]; then
-            echo "Branch name is 'changeset-release/main'"
-            BRANCH_IS_RELEASE=true
-          else
-            echo "Branch name is not 'changeset-release/main'"
-            BRANCH_IS_RELEASE=false
-          fi
       - name: Build Static Files
-        if: ${{ steps.check-branch-name.outputs.BRANCH_IS_RELEASE == 'true' }}
+        if: ${{steps.changesets.outputs.hasChangesets == 'false'}}
         run: npm run build
       - name: Upload Artifact
-        if: ${{ steps.check-branch-name.outputs.BRANCH_IS_RELEASE == 'true' }}
+        if: ${{steps.changesets.outputs.hasChangesets == 'false'}}
         uses: actions/upload-pages-artifact@v2
         with:
           path: './docs'
       - name: Deploy to GitHub Pages
-        if: ${{ steps.check-branch-name.outputs.BRANCH_IS_RELEASE == 'true' }}
+        if: ${{steps.changesets.outputs.hasChangesets == 'false'}}
         id: deployment
         uses: actions/deploy-pages@v2
