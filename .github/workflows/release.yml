@@ -17,6 +17,7 @@ jobs:
       contents: write # to create release (changesets/action)
       pull-requests: write # to create version pull request (changesets/action)
       pages: write # to publish to pages
+      id-token: write # to create deployment (deploy-pages)
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
