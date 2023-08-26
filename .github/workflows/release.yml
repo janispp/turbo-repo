@@ -36,6 +36,7 @@ jobs:
         with:
           path: './docs'
   deploy:
+    name: Deploy
     needs: release
     permissions:
       pages: write
