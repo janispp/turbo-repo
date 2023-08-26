@@ -2,7 +2,7 @@ const fs = require('fs');
 const archiver = require('archiver');
 const path = require("path");
 
-const package = process.argv.slice(2)[1];
+const package = process.argv.slice(2)[0];
 
 const pathToPackage = path.join(__dirname, "apps", package);
 const pathToJson = path.join(pathToPackage, "package.json");
