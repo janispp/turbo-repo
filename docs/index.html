@@ -3,17 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Components</title>
+    <style>
+        #components {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+
+        #components td, #components th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #components tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #components tr:hover {
+            background-color: #ddd;
+        }
+
+        #components th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <div style="margin:20px">
-    <h1>Latest versions for components</h1>
+    <h1>Components</h1>
 
-    <h2>LCD.ConfigUploader</h2>2
-    <div style="display: grid; gap: 6px">
-        <div><a download href="/turbo-repo/LCD.ConfigUploader.zip">LCD.ConfigUploader.zip</a></div>
-        <div><a download href="/turbo-repo/LCD.ConfigUploader.version.json">LCD.ConfigUploader.version.json</a></div>
-        <div><a download href="/turbo-repo/LCD.ConfigUploader.changelog.md">LCD.ConfigUploader.changelog.md</a></div>
-    </div>
+    <table id="components">
+        <tr>
+            <th>Component</th>
+            <th>Version</th>
+            <th>Changelog</th>
+            <th>Download</th>
+        </tr>
+        <tr>
+            <td>LCD.ConfigUploader</td>
+            <td><a download href="/turbo-repo/LCD.ConfigUploader.version.json">LCD.ConfigUploader.version.json</a></td>
+            <td><a download href="/turbo-repo/LCD.ConfigUploader.changelog.md">LCD.ConfigUploader.changelog.md</a></td>
+            <td><a download href="/turbo-repo/LCD.ConfigUploader.zip">LCD.ConfigUploader.zip</a></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
