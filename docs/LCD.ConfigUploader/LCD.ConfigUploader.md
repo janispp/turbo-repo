@@ -1,6 +1,7 @@
 # Latest version
 
 * Download file [LCD.ConfigUploader.zip](./LCD.ProductWrapper.zip)
+* Download version file [LCD.ProductWrapper.version.json](./LCD.ProductWrapper.version.json)
 
 # LCD.ConfigUploader
 
