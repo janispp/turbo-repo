@@ -16,7 +16,6 @@ jobs:
     permissions:
       contents: write # to create release (changesets/action)
       pull-requests: write # to create version pull request (changesets/action)
-      pages: write # to publish to pages
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -30,3 +29,21 @@ jobs:
       - name: Build Static Files
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: echo steps.changesets.outputs
+  publish:
+    needs: release
+    if: steps.changesets.outputs.hasChangesets == 'true'
+    name: Publish To Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to create release (changesets/action)
+      pages: write # to publish to pages
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './docs'
