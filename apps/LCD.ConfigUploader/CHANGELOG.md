@@ -1,5 +1,12 @@
 # config-uploader
 
+## 2.1.1
+
+### Patch Changes
+
+- 976d4ad: something changed not here
+- e46b84f: super nice
+
 ## 2.1.0
 
 ### Minor Changes
