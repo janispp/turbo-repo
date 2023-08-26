@@ -16,6 +16,8 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -36,18 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: './docs'
-  deploy:
-    name: Deploy
-    needs: release
-    if: steps.changesets.outputs.hasChangesets == 'true'
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
+        if: steps.changesets.outputs.hasChangesets == 'true'
         id: deployment
         uses: actions/deploy-pages@v2
