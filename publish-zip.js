@@ -13,7 +13,7 @@ const projectName = packageJson.name;
 const destinationFolder = path.join(__dirname, "docs");
 const versionJsonFullPath = `${path.join(destinationFolder, projectName)}.version.json`;
 const changelogFullPath = `${path.join(destinationFolder, projectName)}.changelog.md`;
-const zipFileNameFullPath = path.join(destinationFolder,`${projectName}-${packageJson.version}.zip`);
+const zipFileNameFullPath = path.join(destinationFolder,`${projectName}.zip`);
 
 console.log(`Publishing to ${destinationFolder}...`)
 
