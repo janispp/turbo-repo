@@ -29,7 +29,7 @@ jobs:
       - name: Changesets
         run: echo ${{steps.changesets.outputs}}
       - name: Build Static Files
-        run: turbo run build
+        run: npm run build
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
