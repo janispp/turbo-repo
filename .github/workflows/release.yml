@@ -16,8 +16,6 @@ jobs:
     permissions:
       contents: write # to create release (changesets/action)
       pull-requests: write # to create version pull request (changesets/action)
-      pages: write # to publish to pages
-      id-token: write # to create deployment (deploy-pages)
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -34,6 +32,19 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: echo ${{steps.changesets.outputs}}
       - name: Upload Artifact
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/upload-pages-artifact@v2
         with:
-          folder: docs
+          path: './docs'
+  deploy:
+    needs: release
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
