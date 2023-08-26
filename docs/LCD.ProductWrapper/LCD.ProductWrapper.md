@@ -1,6 +1,6 @@
 # Latest version
 
-* Download file [LCD.ProductWrapper.zip](./LCD.ProductWrapper.zip)
+* Download component zip file [LCD.ProductWrapper.zip](./LCD.ProductWrapper.zip)
 * Download version file [LCD.ProductWrapper.version.json](./LCD.ProductWrapper.version.json)
 
 # LCD.ProductWrapper
