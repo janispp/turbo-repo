@@ -1,5 +1,11 @@
 # product-wrapper
 
+## 2.1.1
+
+### Patch Changes
+
+- 97a5c7b: small change2
+
 ## 2.1.0
 
 ### Minor Changes
