@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Static Files
         if: steps.changesets.outputs.hasChangesets == 'false'
-        run: echo steps.changesets.outputs
+        run: echo ${{steps.changesets.outputs}}
   publish:
     needs: release
     if: steps.changesets.outputs.hasChangesets == 'true'
