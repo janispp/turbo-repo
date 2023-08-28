@@ -1,5 +1,15 @@
 # config-uploader
 
+## 2.2.0
+
+### Minor Changes
+
+- a9f880c: Major text change
+
+### Patch Changes
+
+- ed75f98: Small update in text
+
 ## 2.1.4
 
 ### Patch Changes
