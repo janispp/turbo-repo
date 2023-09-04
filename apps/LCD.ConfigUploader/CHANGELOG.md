@@ -1,5 +1,11 @@
 # config-uploader
 
+## 2.2.1
+
+### Patch Changes
+
+- 3847098: Hello 2
+
 ## 2.2.0
 
 ### Minor Changes
