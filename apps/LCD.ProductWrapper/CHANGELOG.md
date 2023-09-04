@@ -1,5 +1,11 @@
 # config-uploader
 
+## 2.2.2
+
+### Patch Changes
+
+- 0070a17: DSL_PREPARE_PACKAGE
+
 ## 2.2.1
 
 ### Patch Changes
