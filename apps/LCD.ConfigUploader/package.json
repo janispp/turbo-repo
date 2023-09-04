@@ -3,7 +3,7 @@
   "version": "2.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
+    "dev": "next dev",
     "build": "next build",
     "packaging": "node ../../publish-zip.js LCD.ConfigUploader",
     "start": "next start",
