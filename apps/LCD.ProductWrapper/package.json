@@ -1,11 +1,11 @@
 {
-  "name": "LCD.ConfigUploader",
+  "name": "LCD.ProductWrapper",
   "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "packaging": "node ../../publish-zip.js LCD.ConfigUploader",
+    "packaging": "node ../../prepare-package.js LCD.ProductWrapper",
     "start": "next start",
     "lint": "next lint"
   },

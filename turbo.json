@@ -3,6 +3,7 @@
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
+      "env": ["DSL_PREPARE_PACKAGE"],
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },

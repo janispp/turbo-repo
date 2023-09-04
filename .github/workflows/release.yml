@@ -11,6 +11,8 @@ permissions: {} #reset
 
 jobs:
   release:
+    env:
+      DSL_PREPARE_PACKAGE: "1"
     name: Release
     runs-on: ubuntu-latest
     permissions:
